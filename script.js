@@ -60,11 +60,10 @@ $(document).ready(function() {
       ScrollReveal().reveal(".project-title, .contact-title", {
         origin: "top"
       });
-      ScrollReveal().reveal(".projects, .contact", {
+      ScrollReveal().reveal(".portfolio, .contact", {
         origin: "bottom"
       });
-  
-    //contact form to excel sheet
+       //contact form to excel sheet
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec';
     const form = document.forms['submitToGoogleSheet']
     const msg = document.getElementById("msg")
@@ -82,8 +81,9 @@ $(document).ready(function() {
             .catch(error => console.error('Error!', error.message))
     })
       
-    });
-    
+   
+  
+   
     function updateActiveSection() {
       var scrollPosition = $(window).scrollTop();
     
@@ -110,5 +110,14 @@ $(document).ready(function() {
       });
     }
     
+    document.addEventListener("DOMContentLoaded", function () {
+      var container = document.querySelector(".images-container");
   
-   
+      // Listen for the end of the animation and stop it
+      container.addEventListener("animationend", function () {
+        container.style.animation = "none";
+      });
+    });
+    // contact form variables
+
+});
